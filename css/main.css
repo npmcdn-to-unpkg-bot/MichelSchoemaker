@@ -94,18 +94,125 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* ---- base ---- */
+
+html,body{
+    width:100%;
+    height:100%;
+    background:#111;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position:relative;
+}
+
+.myName {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.menuSection {
+  position: fixed;
+  bottom: 0px;
+  height:70px;
+  width:25%;
+  opacity:0.8;
+}
+#name {
+  font-size: 46px;
+  color: #000000;
+}
+
+#tagline {
+  font-size: 40px;
+  color: #000000;
+}
+
+#about {
+  background-color: #43347C;
+}
+
+#about:hover {
+  height:80px;
+  width:37%;
+  transition: 0.5s;
+}
+
+#about:hover ~#software{
+  width:21%;
+  left:37%;
+  transition: 0.5s;
+}
+
+#about:hover ~#hardware{
+  width:21%;
+  left:58%;
+  transition: 0.5s;
+}
+
+#about:hover ~#contact{
+  width:21%;
+  left:79%;
+  transition: 0.5s;
+}
+
+#software {
+  background-color: #1B976C;
+  left:25%;
+}
+
+#hardware {
+  background-color:  #F5A623;
+  left:50%;
+}
+
+#contact {
+  background-color:  #C82541;
+  left:75%;
+}
 
 
 
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+#name {
+  font-size: 36px;
+  color: #000000;
+}
 
+#tagline {
+  font-size: 30px;
+  color: #000000;
+}
 
-
-
-
-
-
-
-
+}
 
 
 
