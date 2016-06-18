@@ -158,30 +158,6 @@ canvas{
   background-color: #43347C;
 }
 
-#about:hover {
-  height:80px;
-  width:37%;
-  transition: 0.5s;
-}
-
-#about:hover ~#software{
-  width:21%;
-  left:37%;
-  transition: 0.5s;
-}
-
-#about:hover ~#hardware{
-  width:21%;
-  left:58%;
-  transition: 0.5s;
-}
-
-#about:hover ~#contact{
-  width:21%;
-  left:79%;
-  transition: 0.5s;
-}
-
 #software {
   background-color: #1B976C;
   left:25%;
