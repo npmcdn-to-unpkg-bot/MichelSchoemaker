@@ -36,11 +36,13 @@ var h = $(window).height();
 })();
 
 $(function() {
+    var secs = 4;
+    var duration = 200;
     // Init Controller
     var controller = new ScrollMagic.Controller();
     //create animation
     var nameTween = new TimelineMax()
-    .to('.title', 2, {opacity:0})
+    .to('.title', duration, {opacity:0})
     //create a scene
     new ScrollMagic.Scene({
       duration:200,
@@ -50,40 +52,47 @@ $(function() {
     .addTo(controller);
 
     var aboutTween = new TimelineMax()
-    .to('#about', 2, {height:100, opacity:1})
+    .to('#about', duration, {height:100, opacity:1})
+    .to('#aboutTitle', secs, {opacity:1})
     //create a scene
     new ScrollMagic.Scene({
-      duration:200,
+      duration:duration,
       offset:h/4,
     })
     .setTween(aboutTween)
     .addTo(controller);
 
     var softwareTween = new TimelineMax()
-    .to('#about', 2, {height:70, opacity:0.7})
-    .to('#software', 2, {height:100, opacity:1})
+    .to('#about', secs, {height:70, opacity:0.7})
+    .to('#aboutTitle', secs, {opacity:0})
+    .to('#software', secs, {height:100, opacity:1})
+    .to('#softwareTitle', secs, {opacity:1})
     new ScrollMagic.Scene({
-      duration:200,
+      duration:duration,
       offset:h/4+h,
     })
     .setTween(softwareTween)
     .addTo(controller);
 
     var hardwareTween = new TimelineMax()
-    .to('#software', 2, {height:70, opacity:0.7})
-    .to('#hardware', 2, {height:100, opacity:1})
+    .to('#software', secs, {height:70, opacity:0.7})
+    .to('#softwareTitle', secs, {opacity:0})
+    .to('#hardware', secs, {height:100, opacity:1})
+    .to('#hardwareTitle', secs, {opacity:1})
     new ScrollMagic.Scene({
-      duration:200,
+      duration:duration,
       offset:h/4+2*h,
     })
     .setTween(hardwareTween)
     .addTo(controller);
 
     var contactTween = new TimelineMax()
-    .to('#hardware', 2, {height:70, opacity:0.7})
-    .to('#contact', 2, {height:100, opacity:1})
+    .to('#hardware', secs, {height:70, opacity:0.7})
+    .to('#hardwareTitle', secs, {opacity:0})
+    .to('#contact', secs, {height:100, opacity:1})
+    .to('#contactTitle', secs, {opacity:1})
     new ScrollMagic.Scene({
-      duration:200,
+      duration:duration,
       offset:h/4+3*h,
     })
     .setTween(contactTween)

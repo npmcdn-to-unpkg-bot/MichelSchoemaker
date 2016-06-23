@@ -128,8 +128,8 @@ canvas{
   width: 100%;
   height: 100%;
   background-color: white;
+  background-color:#f5f5f5;
 }
-
 .title {
   position: fixed;
   top: 50%;
@@ -146,6 +146,17 @@ canvas{
   height:70px;
   width:25%;
   opacity:0.8;
+}
+
+.menuTitle {
+  position:fixed;
+  bottom:100px;
+  width:25%;
+  /*background-color: white;*/
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-size:60px;
+  opacity:0;
 }
 
 .card {
@@ -189,14 +200,6 @@ canvas{
   transform: translate(0%, -50%);
 }
 
-.cards1 {
-
-}
-
-.cards2 {
-
-}
-
 .aboutMe {
   font-family: 'Fjalla One', sans-serif;
   font-size: 24px;
@@ -220,6 +223,11 @@ canvas{
   transform: translate(-50%, 0%);
 }
 
+/*needed to make container opacity 0*/
+element.style {
+  opacity:0;
+}
+
 #name {
   font-size: 46px;
   color: #000000;
@@ -234,8 +242,17 @@ canvas{
   background-color: #43347C;
 }
 
+#aboutTitle {
+  color:  #43347C;
+}
+
 #software {
   background-color: #1B976C;
+  left:25%;
+}
+
+#softwareTitle {
+  color: #1B976C;
   left:25%;
 }
 
@@ -244,8 +261,18 @@ canvas{
   left:50%;
 }
 
+#hardwareTitle {
+  color:  #F5A623;
+  left:50%;
+}
+
 #contact {
   background-color:  #C82541;
+  left:75%;
+}
+
+#contactTitle {
+  color:  #C82541;
   left:75%;
 }
 
