@@ -161,7 +161,7 @@ canvas{
 
 .card {
   width:200px;
-  background-color: black;
+  border:solid 2px black;
 }
 
 /* Set some height to cards */
