@@ -98,3 +98,27 @@ $(function() {
     .setTween(contactTween)
     .addTo(controller);
 });
+
+$("#about").click(function () {
+  $('html,body').animate({
+      scrollTop: h,
+  }, 1000);
+});
+
+$("#software").click(function () {
+  $('html,body').animate({
+      scrollTop: h*2,
+  }, 1000);
+});
+
+$("#hardware").click(function () {
+  $('html,body').animate({
+      scrollTop: h*3,
+  }, 1000);
+});
+
+$("#contact").click(function () {
+  $('html,body').animate({
+      scrollTop: h*4,
+  }, 1000);
+});
