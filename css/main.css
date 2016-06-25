@@ -146,6 +146,10 @@ canvas{
   height:70px;
   width:25%;
   opacity:0.8;
+  font-family: 'Fjalla One', sans-serif;
+  font-size:40px;
+  color:white;
+  text-align: center;
 }
 
 .menuTitle {
@@ -239,6 +243,15 @@ element.style {
   color:  #43347C;
 }
 
+#aboutHover {
+  transform:translate(0%, 20%);
+  visibility:hidden;
+}
+
+#about:hover #aboutHover {
+  visibility:visible;
+}
+
 #software {
   background-color: #1B976C;
   left:25%;
@@ -247,6 +260,15 @@ element.style {
 #softwareTitle {
   color: #1B976C;
   left:25%;
+}
+
+#softwareHover {
+  transform:translate(0%, 20%);
+  visibility:hidden;
+}
+
+#software:hover #softwareHover {
+  visibility: visible;
 }
 
 #hardware {
@@ -259,6 +281,15 @@ element.style {
   left:50%;
 }
 
+#hardwareHover {
+  transform:translate(0%, 20%);
+  visibility:hidden;
+}
+
+#hardware:hover #hardwareHover {
+  visibility: visible;
+}
+
 #contact {
   background-color:  #C82541;
   left:75%;
@@ -267,6 +298,15 @@ element.style {
 #contactTitle {
   color:  #C82541;
   left:75%;
+}
+
+#contactHover {
+  transform:translate(0%, 20%);
+  visibility:hidden;
+}
+
+#contact:hover #contactHover {
+  visibility: visible;
 }
 
 #michiCard {

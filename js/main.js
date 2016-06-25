@@ -54,6 +54,10 @@ $(function() {
     var aboutTween = new TimelineMax()
     .to('#about', duration, {height:100, opacity:1})
     .to('#aboutTitle', secs, {opacity:1})
+    .to('#aboutHover', secs, {opacity:0})
+    .to('#softwareHover', secs, {opacity:0})
+    .to('#hardwareHover', secs, {opacity:0})
+    .to('#contactHover', secs, {opacity:0})
     //create a scene
     new ScrollMagic.Scene({
       duration:duration,
