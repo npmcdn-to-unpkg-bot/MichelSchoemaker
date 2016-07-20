@@ -41,19 +41,8 @@ $(function() {
     // Init Controller
     var controller = new ScrollMagic.Controller();
     //create animation
-    var nameTween = new TimelineMax()
+    var hideName = new TimelineMax()
     .to('.title', duration, {opacity:0})
-    //create a scene
-    new ScrollMagic.Scene({
-      duration:200,
-      offset:100,
-    })
-    .setTween(nameTween)
-    .addTo(controller);
-
-    var aboutTween = new TimelineMax()
-    .to('#about', duration, {height:100, opacity:1})
-    .to('#aboutTitle', secs, {opacity:1})
     .to('#aboutHover', secs, {opacity:0})
     .to('#softwareHover', secs, {opacity:0})
     .to('#hardwareHover', secs, {opacity:0})
@@ -61,45 +50,81 @@ $(function() {
     //create a scene
     new ScrollMagic.Scene({
       duration:duration,
-      offset:h/2,
+      offset:100,
     })
-    .setTween(aboutTween)
+    .setTween(hideName)
     .addTo(controller);
 
-    var softwareTween = new TimelineMax()
+    var showAbout = new TimelineMax()
+    .to('#about', duration, {height:100, opacity:1})
+    .to('#aboutTitle', secs, {opacity:1})
+    //create a scene
+    new ScrollMagic.Scene({
+      duration:duration,
+      offset:3*h/4,
+    })
+    .setTween(showAbout)
+    .addTo(controller);
+
+    var hideAbout = new TimelineMax()
     .to('#about', secs, {height:70, opacity:0.7})
     .to('#aboutTitle', secs, {opacity:0})
+    //create a scene
+    new ScrollMagic.Scene({
+      duration:duration,
+      offset:h/4+h,
+    })
+    .setTween(hideAbout)
+    .addTo(controller);
+
+    var showSoftware = new TimelineMax()
     .to('#software', secs, {height:100, opacity:1})
     .to('#softwareTitle', secs, {opacity:1})
     new ScrollMagic.Scene({
       duration:duration,
-      offset:h/2+h,
+      offset:3*h/4+h,
     })
-    .setTween(softwareTween)
+    .setTween(showSoftware)
     .addTo(controller);
 
-    var hardwareTween = new TimelineMax()
+    var hideSoftware = new TimelineMax()
     .to('#software', secs, {height:70, opacity:0.7})
     .to('#softwareTitle', secs, {opacity:0})
+    new ScrollMagic.Scene({
+      duration:duration,
+      offset:h/4+2*h,
+    })
+    .setTween(hideSoftware)
+    .addTo(controller);
+
+    var showHardware = new TimelineMax()
     .to('#hardware', secs, {height:100, opacity:1})
     .to('#hardwareTitle', secs, {opacity:1})
     new ScrollMagic.Scene({
       duration:duration,
-      offset:h/2+2*h,
+      offset:3*h/4+2*h,
     })
-    .setTween(hardwareTween)
+    .setTween(showHardware)
     .addTo(controller);
 
-    var contactTween = new TimelineMax()
+    var hideHardware = new TimelineMax()
     .to('#hardware', secs, {height:70, opacity:0.7})
     .to('#hardwareTitle', secs, {opacity:0})
+    new ScrollMagic.Scene({
+      duration:duration,
+      offset:h/4+3*h,
+    })
+    .setTween(hideHardware)
+    .addTo(controller);
+
+    var showContact = new TimelineMax()
     .to('#contact', secs, {height:100, opacity:1})
     .to('#contactTitle', secs, {opacity:1})
     new ScrollMagic.Scene({
       duration:duration,
-      offset:h/2+3*h,
+      offset:3*h/4+3*h,
     })
-    .setTween(contactTween)
+    .setTween(showContact)
     .addTo(controller);
 });
 
@@ -112,17 +137,17 @@ $("#about").click(function () {
 $("#software").click(function () {
   $('html,body').animate({
       scrollTop: h*2,
-  }, 1000);
+  }, 1250);
 });
 
 $("#hardware").click(function () {
   $('html,body').animate({
       scrollTop: h*3,
-  }, 1000);
+  }, 1500);
 });
 
 $("#contact").click(function () {
   $('html,body').animate({
       scrollTop: h*4,
-  }, 1000);
+  }, 1750);
 });
