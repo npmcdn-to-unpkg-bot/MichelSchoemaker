@@ -6,7 +6,6 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 var DEBUG = false;
 // Accepts any class name
 var rellax = new Rellax('.rellax');
-var h = $(window).height();
 
 (function(){
   var grid;
@@ -35,9 +34,10 @@ var h = $(window).height();
   window.addEventListener('resize', update);
 })();
 
-$(function() {
+$(function setMenu() {
     var secs = 4;
     var duration = 200;
+    var h = $(window).height();
     // Init Controller
     var controller = new ScrollMagic.Controller();
     //create animation
@@ -56,7 +56,7 @@ $(function() {
     .addTo(controller);
 
     var showAbout = new TimelineMax()
-    .to('#about', duration, {height:100, opacity:1})
+    .to('#about', secs, {height:100, opacity:1})
     .to('#aboutTitle', secs, {opacity:1})
     //create a scene
     new ScrollMagic.Scene({
@@ -126,28 +126,28 @@ $(function() {
     })
     .setTween(showContact)
     .addTo(controller);
-});
 
-$("#about").click(function () {
-  $('html,body').animate({
-      scrollTop: h,
-  }, 1000);
-});
+    $("#about").click(function () {
+      $('html,body').animate({
+        scrollTop: h,
+      }, 1000);
+    });
 
-$("#software").click(function () {
-  $('html,body').animate({
-      scrollTop: h*2,
-  }, 1250);
-});
+    $("#software").click(function () {
+      $('html,body').animate({
+          scrollTop: h*2,
+      }, 1250);
+    });
 
-$("#hardware").click(function () {
-  $('html,body').animate({
-      scrollTop: h*3,
-  }, 1500);
-});
+    $("#hardware").click(function () {
+      $('html,body').animate({
+          scrollTop: h*3,
+      }, 1500);
+    });
 
-$("#contact").click(function () {
-  $('html,body').animate({
-      scrollTop: h*4,
-  }, 1750);
+    $("#contact").click(function () {
+      $('html,body').animate({
+          scrollTop: h*4,
+      }, 1750);
+    });
 });
