@@ -34,7 +34,7 @@ var rellax = new Rellax('.rellax');
   window.addEventListener('resize', update);
 })();
 
-$(function setMenu() {
+(function setMenu() {
     var secs = 4;
     var duration = 200;
     var h = $(window).height();
@@ -150,4 +150,4 @@ $(function setMenu() {
           scrollTop: h*4,
       }, 1750);
     });
-});
+})();

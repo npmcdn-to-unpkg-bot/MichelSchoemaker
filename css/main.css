@@ -374,11 +374,29 @@ element.style {
   height:120vh;
 }
 
-.card {
-  position:relative;
 }
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  #aboutHover {
+  visibility:visible;
+  }
+
+  #softwareHover {
+  visibility:visible;
+  }
+
+  #hardwareHover {
+  visibility:visible;
+  }
+
+  #contactHover {
+  visibility:visible;
+  }
+
 }
+
 
 /* ==========================================================================
    Helper classes
