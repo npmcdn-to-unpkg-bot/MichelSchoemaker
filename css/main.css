@@ -351,40 +351,44 @@ element.style {
 
 /* Smartphones ----------- */
 @media only screen and (max-width : 767px) {
-/* Styles */
-#name {
-  font-size: 34px;
-  color: #000000;
-}
 
-#tagline {
-  font-size: 30px;
-  color: #000000;
-}
+  .title {
+      top: 30%;
+    }
 
-.fullPage {
-  height:120vh;
-}
+  #name {
+    font-size: 34px;
+    color: #000000;
+  }
 
-.softwarePage {
-  height:180vh;
-}
+  #tagline {
+    font-size: 30px;
+    color: #000000;
+  }
 
-.hardwarePage {
-  height:120vh;
-}
+  .fullPage {
+    height:120vh;
+  }
 
-.card {
-  width:160px;
-}
+  .softwarePage {
+    height:180vh;
+  }
 
-.menuSection {
-  visibility:hidden;
-}
+  .hardwarePage {
+    height:120vh;
+  }
 
-.menuTitle {
-  visibility:hidden;
-}
+  .card {
+    width:160px;
+  }
+
+  .menuSection {
+    visibility:hidden;
+  }
+
+  .menuTitle {
+    visibility:hidden;
+  }
 
 }
 
